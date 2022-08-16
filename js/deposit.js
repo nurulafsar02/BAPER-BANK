@@ -13,6 +13,16 @@
 
     const previousDepositTotalString = depositeTotalElement.innerText;
     const previousDepositTotal = parseFloat(previousDepositTotalString);
+
+    depositField.value = '';
+
+    if(isNaN(newDepositAmount)){
+        alert('Please Provide A Value Of Ammount');
+        return;
+    }
+
+
+
     //step-4
     const currentDepositTotal = previousDepositTotal +  newDepositAmount ;
 
@@ -24,6 +34,8 @@
     const previousBlanceTotalString = blanceTotalElement.innerText;
     const  previousBlanceTotal =  parseFloat(previousBlanceTotalString);
 
+    
+  
     //step-6
     const currentBlancetTotal = previousBlanceTotal + newDepositAmount;
         blanceTotalElement.innerText = currentBlancetTotal;
